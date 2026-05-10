@@ -50,23 +50,6 @@ Romi listens to voice input, understands user intent, generates intelligent resp
 
 ---
 
-## Installation (APK)
-
-1. Download the APK file from the GitHub Releases section
-2. Open the APK on your Android device
-3. Enable “Install from unknown sources” when prompted
-4. Install and start using Romi
-
-Note: Android may display a security warning. This is normal for APK files installed outside the Play Store.
-
----
-
-## APK Download
-- Navigate to the **Releases** section of this repository
-- Download the latest `app-release.apk`
-- Install and use the application
-
----
 
 ## Current Limitations
 - Image generation is not supported
