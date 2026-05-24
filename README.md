@@ -1,77 +1,68 @@
-# Romi – Smart Voice Assistant App (Flutter)
+# Romi – Personalized AI Assistant
 
-Romi is a modern, lightweight AI-powered voice assistant built using Flutter.  
-It enables fast, natural conversations through voice and text while focusing on simplicity, performance, and user privacy.
-
-Romi listens to voice input, understands user intent, generates intelligent responses using large language models, and speaks back using text-to-speech in real time.
+Romi is a Flutter-based AI assistant that combines voice interaction, conversational AI, and real-time responses using Groq’s LLM (LLaMA 3). It is designed to function as a smart personal assistant with both voice and text capabilities.
 
 ---
 
 ## Features
 
-### Voice Interaction
-- Real-time speech-to-text input
-- Natural conversation flow
-- Press-to-talk interface
-- Smart listening and stopping controls
-
-### AI-Powered Responses
-- Intelligent replies powered by Groq (LLaMA models)
-- Fast response times with low latency
-- Context-aware conversations
-- No paid API or billing required
-
-### Text-to-Speech Output
-- Clear and natural voice responses
-- Tap again to stop speaking instantly
-- Smooth and responsive audio handling
-
-### Clean and Modern UI
-- Minimal and user-friendly design
-- Animated assistant avatar
-- Chat-style response bubbles
-- Optimized for phones and tablets
-
----
-
-## Privacy
-- No user accounts required
-- No personal data stored
-- Conversations are processed securely
+- AI chat powered by Groq (LLaMA 3.1)
+- Speech-to-text input
+- Text-to-speech responses
+- Context-aware conversation (chat memory)
+- Prompt detection (text vs image intent)
+- Fast responses via Groq API
+- Clean and modern Flutter UI
 
 ---
 
 ## Tech Stack
-- Flutter – Cross-platform UI framework
-- Groq API – Free, high-speed AI inference
-- Speech to Text – Voice recognition
-- Flutter TTS – Text-to-speech output
-- Material Design – Clean and responsive UI
+
+- Flutter
+- Dart
+- Groq API (LLaMA 3.1)
+- speech_to_text
+- flutter_tts
+- http
+- flutter_dotenv
 
 ---
 
+## Project Structure
+- `lib/`
+  - `main.dart` - Entry point of the app
+  - `services/` - API and speech services
+    - `groq_api_service.dart` - Handles communication with Groq API
+    - `speech_service.dart` - Manages speech-to-text and text-to-speech
+  - `widgets/` - Reusable UI components
+    - `chat_bubble.dart` - Chat bubble widget for messages
+    - `input_field.dart` - Input field for user messages
+  - `screens/` - App screens
+    - `home_screen.dart` - Main screen with chat interface
 
-## Current Limitations
-- Image generation is not supported
-- Requires an active internet connection
-- Android-only support at present
-
----
-
+## Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone
+    ```
+2. Navigate to the project directory:
+3. ```bash
+   cd romi
+   ```
+4. Install dependencies:
+5. ```bash
+   flutter pub get
+   ```
+6. Create a `.env` file in the root directory and add your Groq API key:
+   ```
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
+   7. Run the app:
+      ```bash
+      flutter run
+      ```
 ## Future Enhancements
-- Wake-word detection (e.g., “Hey Romi”)
-- Streaming AI responses
-- Multiple voice options
-- Offline fallback mode
-- Google Play Store release
-
----
-
-## Developer
-Developed using Flutter with a focus on learning, performance, and clean architecture.
-
----
-
-## License
-This project is intended for educational and personal use.  
-All source code, assets, and designs are original and non-copyrighted.
+- Add support for image generation and recognition
+- Implement user authentication and personalized settings
+- Integrate with calendar and task management APIs
+- Improve error handling and offline capabilities
