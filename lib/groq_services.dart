@@ -1,13 +1,24 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:romeo/secrets.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class GroqServices {
-  final List<Map<String, String>> messages = [];
+final List<Map<String, String>> messages = [];
+late final String apiKey;
 
-  static const String _baseUrl =
-      'https://api.groq.com/openai/v1/chat/completions';
+GroqServices() {
+final key = dotenv.env["GROQ_API_KEY"];
+
+if (key == null || key.isEmpty) {
+throw Exception("❌ GROQ_API_KEY not found. Check .env file");
+}
+
+apiKey = key;
+}
+
+static const String _baseUrl =
+'https://api.groq.com/openai/v1/chat/completions';
 
   /// Detect whether prompt wants image generation
   Future<String> isArtPrompt(String prompt) async {
