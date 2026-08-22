@@ -25,6 +25,9 @@ class Pallete {
   static const Color darkCardColor = Color.fromRGBO(30, 30, 45, 1); // Dark Card
   static const Color darkAccentColor = Color.fromRGBO(255, 215, 0, 1); // Gold
 
+  // Muted violet for dark-mode chat bubbles/buttons (softer than the gold accent)
+  static const Color darkUserBubbleColor = Color.fromRGBO(90, 70, 160, 1); // Muted Violet
+
   // ================= UNIVERSAL COLORS =================
 
   static const Color blackColor = Colors.black;
